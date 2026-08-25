@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Recommended Career</h1>
+
+    {% for job in jobs %}
+    <div class="card">
+        <h3>{{ job.course }}</h3>
+
+        <p><b>Specialization:</b> {{ job.specialization }}</p>
+
+        <p><b>Interests:</b> {{ job.interest }}</p>
+
+        <p><b>Skills:</b> {{ job.skills }}</p>
+
+        <p><b>Certificate:</b> {{ job.certificate }}</p>
+    </div>
+    {% endfor %}
+
+    <br>
+
+    <a href="/">Back</a>
+
+</div>
+
+</body>
+</html>
